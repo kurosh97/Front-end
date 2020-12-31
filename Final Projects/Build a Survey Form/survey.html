@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" type="text/css" rel="stylesheet" />
     <title>Survey</title>
@@ -16,65 +18,71 @@
             <h1 id="title">freeCodeCamp Survey Form</h>
                 <p><em id="description">Thank you for taking the time to help us improve the platform </em></p>
         </header>
-        <form id="survey-form">
-            <label id="name-label">Name</label>
-            <input id="name" type="text" placeholder="Enter your name..." required />
-            <br />
-            <label id="email-label">Email</label>
-            <input id="email" type="email" placeholder="Enter your email..." required />
-            <br />
-            <label id="number-label">age</label>
-            <input id="number" type="number" placeholder="age..." required min="1" max="100" />
-            <br />
-            <label>What is your favorite feature of freeCodeCamp?</label>
-            </br>
-            <select id="dropdown">
-                <option selected disabled hidden>Select an option</option>
-                <option>2</option>
-                <option>2</option>
-                <option>3</option>
-                <option>3</option>
-            </select>
-            <br />
-            <label>Would you recommend freeCodeCamp to a friend?</label>
-            </br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="yes">Yes</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="no">No</label><br>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="maybe">Maybe</label>
-            <br />
-            <label>What would you like to see improved? <span class="clue">(Check all that apply)</span></label>
-            </br>
-            <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">Front-end
-                Projects</label>
-            <label>
-                <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-end
-                Projects</label>
-            <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Data
-                Visualization</label>
-            <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox">Challenges</label>
-            <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">Open Source
-                Community</label>
-            <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Gitter
-                help rooms</label>
-            <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Videos</label>
-            <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">City
-                Meetups</label>
-            <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox">Wiki</label>
-            <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">Forum</label>
-            <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Additional
-                Courses</label>
-    </div>
-    <br />
-    <label>Any comments or suggestions?</label>
-    </br>
-    <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-    </br>
-    <input id="submit" type="submit" value="Submit" />
-    </form>
 
+        <form id="survey-form">
+            <div id="personal-information">
+                <label id="name-label">Name</label>
+                <input id="name" type="text" placeholder="Enter your name..." required />
+                <br />
+                <label id="email-label">Email</label>
+                <input id="email" type="email" placeholder="Enter your email..." required />
+                <br />
+                <label id="number-label">Age</label>
+                <input id="number" type="number" placeholder="Age..." required min="1" max="100" />
+            </div>
+            <br />
+            <div id="favorite-section">
+                <label>What is your favorite feature of freeCodeCamp?</label>
+                <select id="dropdown">
+                    <option selected disabled hidden>Select an option</option>
+                    <option>one</option>
+                    <option>two</option>
+                </select>
+            </div>
+            <br />
+            <div id="recommend-section">
+                <label>Would you recommend freeCodeCamp to a friend?</label>
+                <br />
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="yes">Yes</label><br />
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="no">No</label><br />
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="maybe">Maybe</label>
+            </div>
+            <br />
+            <div id="improve-section">
+                <label>What would you like to see improved? <span class="clue">(Check all that apply)</span></label>
+                </>
+                <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">Front-end
+                    Projects</label>
+                <label>
+                    <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-end
+                    Projects</label>
+                <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Data
+                    Visualization</label>
+                <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox">Challenges</label>
+                <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">Open
+                    Source
+                    Community</label>
+                <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Gitter
+                    help rooms</label>
+                <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Videos</label>
+                <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">City
+                    Meetups</label>
+                <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox">Wiki</label>
+                <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">Forum</label>
+                <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Additional
+                    Courses</label>
+            </div>
+            <br />
+            <label>Any comments or suggestions?</label>
+            </br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+            </br>
+            <input id="submit" type="submit" value="Submit" />
+        </form>
+    </div>
 </body>
 </body>
 
